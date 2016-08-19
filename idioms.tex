@@ -30,16 +30,13 @@ m = [x**2 for x in l if x%2]
 # m is [4, 16] (squares of even nos)
   \end{lstlisting}
 \item Dictionary comprehensions
+Similar to the above but creates dictionaries. Keys and values
+separated by a \texttt{:}
   \begin{lstlisting}
 d = dict (x = 2, y = 3)
-d0 = {y:x for x,y in d.items()}
-# d0 is {2:'x', 3:'y'}
-d0 = {x:y**2 for x,y in d.items()}
-# d0 is {'x':4, 'y':9}
-d0 = {x:y for x,y in d.items() if y%2}
-# d0 is {'x':2} (Even values only)
-d0 = {x:0 for x in d}
-# d0 is {'x':0, 'y':0}
+{y:x for x,y in d.items()} # {2:'x', 3:'y'}
+{x:y for x,y in d.items() if y%2} # {'x':2}
+{x:0 for x in d} # {'x':0, 'y':0}
   \end{lstlisting}
 \item Module importing
 \begin{lstlisting}

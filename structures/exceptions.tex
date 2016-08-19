@@ -9,20 +9,9 @@ try:
 except IndexError as e:
    # We can handle the exception here. 
    print ("Out of bounds")
-\end{lstlisting}
-Mutliple exceptions with a common handler\\
-\begin{lstlisting}
-  except (IndexError, KeyError) as e:
-\end{lstlisting}
-Separate handlers for each type
-\begin{lstlisting}
-  try
-    ...
-  except Exception1 as e1:
-    ...
-  except Exception2 as e2:
-    ...
-  except Exception:
-    # All other exceptions
+except (TypeError, AttributeError) as e:
+   # Handle TypeError and AttributeError here
+except Exception:
+   # Handle everything else here.
 \end{lstlisting}
 

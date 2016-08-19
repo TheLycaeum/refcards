@@ -5,16 +5,12 @@
 \begin{lstlisting}
 u = {1,2}
 v = {2,3}
+w = {2}
 u.union(v) # {1, 2, 3}
 u | v # {1, 2, 3}
 u & v # {2}
 u.intersection(v) # {2}
 u - v # {1}
 u.isdisjoint(v) # False
-
-w = {2}
 u.issuperset(w) # True
-
-y = {"a"}
-u.isdisjoint(y) # True
 \end{lstlisting}
