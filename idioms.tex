@@ -1,0 +1,56 @@
+\begin{itemize}
+\item Destructuring assignments
+\begin{lstlisting}
+a,b,c = 1,2,3
+# a is 1, b is 2 and c is 3
+
+l = [(1,2), (3,4), (5,6)]
+for i,j in l:
+   print (i+j)
+# Will print 3, 7, 11
+\end{lstlisting}
+\item Iterating with count
+  \begin{lstlisting}
+l = "abcdef"
+for i in range(len(l)):  # Bad style
+   print (i, l[i])
+
+for i,j in enumerate(l): # Good style
+   print (i, j)
+  \end{lstlisting}
+\item List comprehensions
+  \begin{lstlisting}
+l = range(1, 5)
+# l is [1,2,3,4]
+m = [x**2 for x in l] 
+# m is [1,4,9,16]
+m = [x for x in l if x%2 == 0] 
+# m is [1,3] (odd numbers)
+m = [x**2 for x in l if x%2]
+# m is [4, 16] (squares of even nos)
+  \end{lstlisting}
+\item Dictionary comprehensions
+  \begin{lstlisting}
+d = dict (x = 2, y = 3)
+d0 = {y:x for x,y in d.items()}
+# d0 is {2:'x', 3:'y'}
+d0 = {x:y**2 for x,y in d.items()}
+# d0 is {'x':4, 'y':9}
+d0 = {x:y for x,y in d.items() if y%2}
+# d0 is {'x':2} (Even values only)
+d0 = {x:0 for x in d}
+# d0 is {'x':0, 'y':0}
+  \end{lstlisting}
+\item Module importing
+\begin{lstlisting}
+if __name__ == "__main__":
+  # Will only run when module is run
+  f1()
+else:
+  # Will only run when module is imported
+  f2()  
+\end{lstlisting}
+
+This can be used to get different behaviours when importing or running
+a module
+\end{itemize}

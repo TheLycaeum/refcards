@@ -12,14 +12,14 @@
 
 \ProcessOptions
 
-\LoadClass{article}[2013/02/25]
+\LoadClass{article}
 
 \RequirePackage{fixltx2e}
-\RequirePackageWithOptions{nag}[2013/03/25 othodox,l2tabu,abort]
+\RequirePackageWithOptions{nag}[2011/11/25 othodox,l2tabu,abort]
 
 %% Page layout
 
-\RequirePackage{geometry}[2013/03/25]
+\RequirePackage{geometry}
 %\usepackage[landscape,margin=0.5in]{geometry}
 \geometry{landscape,margin=0.5in}
 \RequirePackage{multicol}
@@ -37,6 +37,7 @@
 
 \RequirePackage{titlesec}
 \RequirePackage{nopageno} % To keep \section from resetting page style
+\RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
 \setcounter{secnumdepth}{0} % no section numbering
 \setlength{\parindent}{0pt} % disabling indentation by default

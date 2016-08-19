@@ -1,0 +1,17 @@
+\subsection{Lists}
+\texttt{[1,2,3]} or \texttt{list(1,2,3)} \\
+\textit{Operations} \\
+\texttt{+, *, len()}
+
+\begin{lstlisting}
+l = [3,2]
+l.append(5) # l is [3, 2, 5]
+l.extend(["a", "b"]) 
+# l is now [3, 2, 5, 'a', 'b']
+l.sort() # l is [2, 3, 5, 'a', 'b']
+l.reverse() # l is ['b', 'a', 5, 3, 2]
+[1,2] + [3,4] # [1, 2, 3, 4]
+[1,2] * 2 # [1, 2, 1, 2]
+5 in l # True
+100 in l # False
+\end{lstlisting}

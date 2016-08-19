@@ -1,0 +1,28 @@
+\subsection{exceptions}
+Used for error handling
+
+\begin{lstlisting}
+l = ["a", "b", "c"]
+print (l[5])  # Raises an IndexError exception
+try:
+   print (l[5])
+except IndexError as e:
+   # We can handle the exception here. 
+   print ("Out of bounds")
+\end{lstlisting}
+Mutliple exceptions with a common handler\\
+\begin{lstlisting}
+  except (IndexError, KeyError) as e:
+\end{lstlisting}
+Separate handlers for each type
+\begin{lstlisting}
+  try
+    ...
+  except Exception1 as e1:
+    ...
+  except Exception2 as e2:
+    ...
+  except Exception:
+    # All other exceptions
+\end{lstlisting}
+

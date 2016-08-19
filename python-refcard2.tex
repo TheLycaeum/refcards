@@ -1,0 +1,52 @@
+\documentclass{refsheet}
+
+\usepackage{listings}
+
+%% \renewcommand{\familydefault}{\sfdefault}
+%% \renewcommand*\rmdefault{iwona}
+
+\title{Python 3 Refcard}
+\author {\texttt{http://thelycaeum.in}  \\ \texttt{noufal@nibrahim.net.in}}
+\date{}
+
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\definecolor{darkgray}{rgb}{0.2,0.2,0.1}
+
+\lstset{ %
+  %% backgroundcolor=\color{lightgray},   % choose the background color; you
+  %%                               % must add \usepackage{color} or
+  %%                               % \usepackage{xcolor}
+  basicstyle=\footnotesize \ttfamily,
+  commentstyle=\color{gray} \textit,
+  keywordstyle=\color{blue} \textbf,
+  rulecolor=\color{gray},
+  language=python,
+  showspaces=false,
+  showstringspaces=false,
+  frame=single,
+}
+
+\begin{document}
+\maketitle
+
+\section{Types}
+\input{types/numeric.tex}
+\input{types/strings.tex}
+\input{types/lists.tex}
+\input{types/dictionary.tex}
+\input{types/sets.tex}
+\input{types/tuples.tex}
+
+\section{Control structures}
+\input{structures/def.tex}
+\input{structures/for.tex}
+\input{structures/while.tex}
+\input{structures/if.tex}
+\input{structures/exceptions.tex}
+\input{structures/classes.tex}
+
+\section{Idiomatic Python}
+\input {idioms.tex}
+
+\pagebreak
+\end{document}
