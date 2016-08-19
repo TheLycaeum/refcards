@@ -1,13 +1,14 @@
 \documentclass{refsheet}
 
 \usepackage{listings}
+\usepackage{graphicx}
 
 %% \renewcommand{\familydefault}{\sfdefault}
 %% \renewcommand*\rmdefault{iwona}
 
 \title{Python 3 Refcard}
-\author {\texttt{http://thelycaeum.in}  \\ \texttt{noufal@nibrahim.net.in}}
 \date{}
+\author{}
 
 \definecolor{lightgray}{rgb}{0.9,0.9,0.9}
 \definecolor{darkgray}{rgb}{0.2,0.2,0.1}
@@ -23,11 +24,14 @@
   language=python,
   showspaces=false,
   showstringspaces=false,
-  frame=single,
+  frame=single
 }
 
 \begin{document}
-\maketitle
+\begin{center}
+\Large \textbf{Python 3 refcard}
+\end{center}
+\normalsize
 
 \section{Types}
 \input{types/numeric.tex}
@@ -48,8 +52,27 @@
 \section{Idiomatic Python}
 \input {idioms.tex}
 
-\pagebreak
 \section{Modules}
 \input {stdlib.tex}
 
+\begin{center}
+\includegraphics[scale=0.5]{images/parthenon-callig.png}
+\end{center}
+For more information on courses which the Lyc\ae{}um conducts, please
+visit \texttt{http://thelycaeum.in}. \\To signup on our mailing list,
+please visit \texttt{http://thelycaeum.in/resources.html}. \\For further
+information, please email \texttt{noufal@nibrahim.net.in} or call
+\textit{+91-9567091835}.
+\noindent\rule[0.2ex]{\linewidth}{0.2ex}
+
+The Lyc\ae{}um conducts a 3 month long mentoring course for fresher
+programmers and offers placement assistance. Please contact if you're
+interested.
+
+\begin {center}
+  \large Happy Hacking!
+\end{center}
+
+
 \end{document}
+
