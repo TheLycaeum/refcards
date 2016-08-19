@@ -1,6 +1,4 @@
 refsheet
 ========
 
-Reference sheet class for LaTeX2e
-
-Inspired by http://tex.stackexchange.com/a/99784/17423.
+Reference sheet for Python3. Uses the template from https://github.com/vermiculus/refsheet
