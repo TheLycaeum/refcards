@@ -21,7 +21,7 @@
 
 \RequirePackage{geometry}
 %\usepackage[landscape,margin=0.5in]{geometry}
-\geometry{landscape,margin=0.5in}
+\geometry{paper=a4paper, landscape,margin=0.5in}
 \RequirePackage{multicol}
 
 
