@@ -29,7 +29,7 @@
 
 % \RequirePackage{titling} % Unnecessary
 \renewcommand{\maketitle}{%
-  {\begin{center}\Large \@title \\ \vspace{4pt} \small \@author, \@date\end{center}}%
+  {\begin{center}\Large \@title \\ \vspace{4pt} \small \@author \@date\end{center}\noindent\rule{\linewidth}{0.5ex}}%
 }
 
 
