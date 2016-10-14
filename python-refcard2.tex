@@ -3,7 +3,9 @@
 \usepackage{listings}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{menukeys}
 
+\renewmenumacro{\menu}[>]{shadowedroundedkeys}
 %% \renewcommand{\familydefault}{\sfdefault}
 %% \renewcommand*\rmdefault{iwona}
 
@@ -20,6 +22,7 @@
   %%                               % must add \usepackage{color} or
   %%                               % \usepackage{xcolor}
   basicstyle=\footnotesize \ttfamily,
+  escapeinside={\%*}{*)},
   commentstyle=\color{magenta} \textit,
   keywordstyle=\color{blue} \textbf,
   rulecolor=\color{gray},
@@ -49,16 +52,9 @@
 \input{structures/classes.tex}
 
 \noindent\rule{\linewidth}{0.05ex}
-\section{Common Python idioms}
-\input {idioms.tex}
+\section{Running programs}
+\input {cmdline.tex}
 
-\noindent\rule{\linewidth}{0.05ex}
-\section{Virtualenv}
-\input {venv.tex}
-
-\noindent\rule{\linewidth}{0.05ex}
-\section{Modules}
-\input {stdlib.tex}
 
 \noindent\rule{\linewidth}{0.05ex}
 \begin{center}

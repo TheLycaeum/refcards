@@ -1,0 +1,74 @@
+\subsection{The REPL}
+You can start the interpreter by running \texttt{python} in your
+terminal. The \texttt{>>>} prompt indicates that you're inside the
+interpreter. 
+
+You can type \emph{small} programs and run them here. \keys{\ctrl + d} will
+quit the interpreter.
+
+Multiline statements (e.g. a texttt{def}), will change the to \texttt{...} to
+indicating that you're inside a command. An empty line will end the
+statement.
+
+\begin{lstlisting}[numbers=left, numberstyle=\tiny\color{gray}, xleftmargin={0.75cm}]
+>>> def hello(): %* \keys{\return}*)
+...    print ("Hello, world") %* \keys{\return}*)
+... %* \keys{\return}*)
+>>> hello() %* \keys{\return}*)
+Hello, world
+\end{lstlisting}
+
+On line \#1, the prompt changes to \texttt{...} when you hit
+\keys{\return}. Now you're defining the function \texttt{hello}. Line
+\#2 is the body. Hitting \keys{\return} on an empty line (line \#3) will
+complete the function and give you the \texttt{>>>} prompt back. Now
+you can run the function as in line \#4.
+
+\subsection{Program files}
+You can type a python program into a file
+(e.g. \texttt{example.py}). You can import and run functions inside
+them  
+
+\begin {lstlisting}
+# example.py 
+def add(x, y):
+   return x + y
+\end{lstlisting}
+
+\begin {lstlisting}
+>>> import example # No .py. 
+>>> example.add(5, 6)
+11
+\end{lstlisting}
+
+To run this program directly, you can add an import guard like so and
+run it.
+
+\begin {lstlisting}[numbers=left, numberstyle=\tiny\color{gray}, xleftmargin={0.75cm}]
+# example.py 
+import sys
+
+def add(x, y):
+    return x + y
+
+if __name__ == "__main__":
+    a = sys.argv[1]
+    b = sys.argv[2]
+    print (add(int(a), int(b)))
+\end{lstlisting}
+
+Line \#2 imports the \texttt{sys} module which has command line
+arguments in \texttt{sys.argv}. Line \#8 and \#9 gets the arguments
+and line \#9 converts them to integers and calls \texttt{add} on them.
+
+
+
+
+
+
+
+
+
+
+
+
