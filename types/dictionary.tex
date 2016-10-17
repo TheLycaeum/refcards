@@ -12,9 +12,8 @@ list(d.values()) # [2, 1]
 'a' in d # False
 d['x'] # 1
 d['t'] # raises KeyError
-d.get('t', "Foo") # 'Foo'
-d.get('y', "Foo") # 2
-e = dict(a = 5, x = 10)
-d.update(e) 
-# d is now {'a': 5, 'y': 2, 'x': 10}
+d['t'] = 10 # Adds a new key
+d['t'] # 10
+del d['t'] # Deletes key
+d['t'] # raises KeyError
 \end{lstlisting}
