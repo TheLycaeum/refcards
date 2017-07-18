@@ -1,0 +1,86 @@
+\documentclass{../refsheet}
+
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{menukeys}
+
+\renewmenumacro{\menu}[>]{shadowedroundedkeys}
+%% \renewcommand{\familydefault}{\sfdefault}
+%% \renewcommand*\rmdefault{iwona}
+
+\title{Go Refcard}
+\author{The Lyc\ae{}um, 2017}
+\date{}
+
+
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\definecolor{darkgray}{rgb}{0.2,0.2,0.1}
+
+\lstset{ %
+  %% backgroundcolor=\color{lightgray},   % choose the background color; you
+  %%                               % must add \usepackage{color} or
+  %%                               % \usepackage{xcolor}
+  basicstyle=\footnotesize \ttfamily,
+  escapeinside={\%*}{*)},
+  commentstyle=\color{magenta} \textit,
+  keywordstyle=\color{blue} \textbf,
+  rulecolor=\color{gray},
+  language=python,
+  showspaces=false,
+  showstringspaces=false,
+  frame=single
+}
+
+\begin{document}
+\maketitle
+\section{Types}
+% \input{sections/types/numeric.tex}
+% \input{sections/types/strings.tex}
+% \input{sections/types/lists.tex}
+% \input{sections/types/dictionary.tex}
+% \input{sections/types/sets.tex}
+% \input{sections/types/tuples.tex}
+
+\noindent\rule{\linewidth}{0.05ex}
+\section{Control structures}
+Python statement blocks are marked by indentation (unlike in language
+like C which use curly braces). Statement headers end with a
+\texttt{:} and all statements in the body are indented.
+% \input{sections/structures/def.tex}
+% \input{sections/structures/for.tex}
+% \input{sections/structures/while.tex}
+% \input{sections/structures/if.tex}
+% \input{sections/structures/exceptions.tex}
+% \input{sections/structures/classes.tex}
+
+\noindent\rule{\linewidth}{0.05ex}
+\section{Running programs}
+% \input {sections/cmdline.tex}
+
+\noindent\rule{\linewidth}{0.05ex}
+\section{Virtualenv}
+% \input {sections/venv.tex}
+\includegraphics{../images/golang-small.png}
+
+\noindent\rule{\linewidth}{0.05ex}
+\begin{center}
+\includegraphics[scale=0.4]{../images/parthenon-callig.png}
+\end{center}
+For more information on courses which the Lyc\ae{}um conducts, please
+visit \texttt{http://thelycaeum.in}. \\To stay notified on events and
+courses, sign up for our mailer at \texttt{http://thelycaeum.in/resources.html}. \\For further
+information, please email \\\texttt{noufal@nibrahim.net.in} or call
+\textit{+91-9567091835}.
+\vspace{0.5cm}
+
+The Lyc\ae{}um conducts a 3.5 month long mentoring course for fresher
+programmers and offers placement assistance. Please contact if you're
+interested. The next batch starts in \rule{4cm}{0.1ex}.
+
+    \textcolor{lightgray}{\noindent\rule{\linewidth}{0.05ex}}
+\footnotesize All content \textcopyright The Lyc\ae{}um 2016. Version \input{version.tex}
+
+
+\end{document}
+
