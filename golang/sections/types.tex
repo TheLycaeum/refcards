@@ -1,4 +1,4 @@
-\subsection{Types available}
+\subsection{Basic Types}
 \begin{tabular}{l l l l l l}
 \multicolumn{6}{l}{\texttt{bool}} \\
 \multicolumn{6}{l}{\texttt{string}} \\
@@ -21,3 +21,8 @@ var (
 \end{lstlisting}
 
 \texttt{0} is zero value for numeric types, \texttt{false} for booleans, \texttt{""} for strings.
+
+\texttt{T(v)} converts \texttt{v} to type \texttt{T}. No cross type assignments without conversions.
+
+\texttt{const} can be used to define constants. e.g. \texttt{const Pi = 3.14}.
+
