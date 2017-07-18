@@ -1,0 +1,26 @@
+\subsection{Basic structure}
+A simple hello world program with comments.
+\texttt{package} specifies which package this file is in.
+\texttt{import} is used to use other packages.
+
+\begin{lstlisting}
+// helloworld.go
+package main    // Package for this file
+import "fmt"    // Make the fmt package available
+
+// The main function where execution starts
+func main() { 
+  	fmt.Println("Hello, World") 
+        // Use the Println function
+        // from the fmt package.   
+}
+\end{lstlisting}
+\subsection{Running the program}
+\begin{lstlisting}
+$ go build helloworld.go
+$ ./helloworld
+\end{lstlisting}
+
+\begin{lstlisting}
+$ go run helloworld.go
+\end{lstlisting}

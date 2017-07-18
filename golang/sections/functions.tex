@@ -1,0 +1,26 @@
+\subsection{Functions}
+\subsubsection{Defining functions}
+\begin{lstlisting}
+// Simple function
+func add(x int, y int) int {
+  return x + y
+}
+
+// Type declarations combined
+func sub(x, y int) int {
+ return x - y
+}
+
+// Muti value returns
+func swap(x, y string) (string, string) {
+  return y, x
+}
+
+// Naked returns
+func sumdiff(x, y int) (sum int, diff int) {
+  sum  = x + y
+  diff = x - y
+  return
+}
+
+\end{lstlisting}

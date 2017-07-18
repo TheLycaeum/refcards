@@ -1,6 +1,7 @@
 \documentclass{../refsheet}
 
 \usepackage{listings}
+\usepackage{listings-golang}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{menukeys}
@@ -26,7 +27,7 @@
   commentstyle=\color{magenta} \textit,
   keywordstyle=\color{blue} \textbf,
   rulecolor=\color{gray},
-  language=python,
+  language=Golang,
   showspaces=false,
   showstringspaces=false,
   frame=single
@@ -34,19 +35,15 @@
 
 \begin{document}
 \maketitle
-\section{Types}
-% \input{sections/types/numeric.tex}
-% \input{sections/types/strings.tex}
-% \input{sections/types/lists.tex}
-% \input{sections/types/dictionary.tex}
-% \input{sections/types/sets.tex}
-% \input{sections/types/tuples.tex}
+\section{Basics}
+\input{sections/intro.tex}
+\input{sections/packages.tex}
+\input{sections/functions.tex}
+\input{sections/variables.tex}
 
 \noindent\rule{\linewidth}{0.05ex}
+
 \section{Control structures}
-Python statement blocks are marked by indentation (unlike in language
-like C which use curly braces). Statement headers end with a
-\texttt{:} and all statements in the body are indented.
 % \input{sections/structures/def.tex}
 % \input{sections/structures/for.tex}
 % \input{sections/structures/while.tex}
