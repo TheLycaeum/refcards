@@ -1,0 +1,23 @@
+\subsection{Types available}
+\begin{tabular}{l l l l l l}
+\multicolumn{6}{l}{\texttt{bool}} \\
+\multicolumn{6}{l}{\texttt{string}} \\
+\texttt{int} & \texttt{int8} & \texttt{int16} & \texttt{int32} & \texttt{int64} \\
+\texttt{uint} & \texttt{uint8} & \texttt{uint16} & \texttt{uint32} & \texttt{uint64} \\
+\multicolumn{6}{l}{\texttt{uintptr}} \\
+\multicolumn{6}{l}{\texttt{byte} (alias for \texttt{uint8})} \\
+\multicolumn{6}{l}{\texttt{rune} (alias for \texttt{int32}) - A unicode code point} \\
+\texttt{float32} & \texttt{float64} \\
+\texttt{complex64} & \texttt{complex128} \\
+\end{tabular}
+
+\texttt{int}, \texttt{uint} and \texttt{uintptr} are 32 bit wide on 32-bit machines and 64 on 64-bit machines. Preferred to explict sizes.
+
+\begin{lstlisting}
+var (
+  flag bool = true
+  max_uint32 uint32  = 1<<32-1 
+  )
+\end{lstlisting}
+
+\texttt{0} is zero value for numeric types, \texttt{false} for booleans, \texttt{""} for strings.
