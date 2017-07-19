@@ -1,0 +1,10 @@
+\subsection{Maps}
+Maps are hash tables. \texttt{map [T0]T1} maps from \texttt{T0} to
+\texttt{T1}.
+\begin{lstlisting}
+var m map[string] int
+m = make(map[string] int)
+m = map[string]int {"eight": 8, "twelve": 12}
+m["eight"] + m["twelve"] // 20
+\end{lstlisting}
+
