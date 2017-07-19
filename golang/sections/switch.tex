@@ -1,0 +1,14 @@
+\subsection{Switch}
+Case bodies break automatically except with a \texttt{fallthrough} statement. Also has a small init statement
+\begin{lstlisting}
+func main() {
+  switch os := runtime.GOOS; os {
+    case "linux":
+      fmt.Println("Linux")
+    case "darwin":
+      fmt.Println("OS X.")
+    default:
+      fmt.Printf("Something else")
+    }
+}
+\end{lstlisting}
