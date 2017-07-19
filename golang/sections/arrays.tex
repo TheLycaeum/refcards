@@ -1,0 +1,47 @@
+\subsection{Arrays and slices}
+
+\begin{lstlisting}
+// Creation
+var names [2]string
+// Initialisation
+var primes [8]{2, 3, 5, 7, 11, 13, 17, 19}
+
+// Indexing and assignment
+names[0] = "Rob"
+names[1] = "Pike"
+\end{lstlisting}
+
+Cannot be resized. \emph{Size is part of the type}. A slice is a flexible view into an array.
+\texttt{[]T} is a slice with elements of type \texttt{T}.
+
+\begin{lstlisting}
+  fibonacci := [6]int{1, 1, 2, 3, 5, 8}
+  var n[]int = fibonacci[1:4]  //{1, 2, 3}
+\end{lstlisting}
+
+\begin{lstlisting}
+  // [3]string array
+  var arr = [3]string{"do", "re", "mi"}
+  // []string slice
+  var slice = []string{"do", "re", "mi"}
+\end{lstlisting}
+
+\emph{Length} (\texttt{len(s)}) is the number of elements in the slice.
+\emph{Capacity} (\texttt{cap(s)}) is the number of in the underlying array.
+\\
+\texttt{make(type, len, cap)} is for dynamic arrays.
+\begin{lstlisting}
+  s := make([]int, 5, 15)
+\end{lstlisting}
+\texttt{append} will add elements to a slice. Might allocate new array.
+\begin{lstlisting}
+  var q []int // len(0), cap(0)
+  q = append(q, 1) // len(1), cap(1)
+\end{lstlisting}
+
+Iterating over a slice can be done using \texttt{range}
+\begin{lstlisting}
+  for index,value := range(q) {
+    fmt.Printf("%d %v\n", index, value)
+    }
+\end{lstlisting}
