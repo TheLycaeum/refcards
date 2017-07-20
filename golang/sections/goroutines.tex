@@ -1,0 +1,24 @@
+\subsection{Goroutines} 
+
+\texttt{go add(1,2)} runs the \texttt{add} function in a separate green thread (a \textit{goroutine})\includegraphics{../images/golang-small.png}. The can communicate via \emph{channels}.
+
+\begin{lstlisting}
+func square(ip, op chan int) {
+	var num int
+	for true {
+		num = <- ip // receive
+		op <- num * num  //send back
+	}
+}
+
+func main() {
+	to := make(chan int)
+	from := make(chan int)
+	go square(to, from) // start square
+	for i:=0; i<10; i++ {
+		to <- i // send number
+                // read response
+		fmt.Printf("%d %d\n", i, <-from) 
+	}
+}
+\end{lstlisting}

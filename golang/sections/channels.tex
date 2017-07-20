@@ -1,0 +1,17 @@
+\subsection{Channels}
+\textit{channels} allow you to send messages. Created using \texttt{make}.
+The \texttt{<-} operator reads out of a channel and \texttt{->} writes into it.
+Channels block when they're full or when there's no data to read.
+\begin{lstlisting}
+// Channel has a buffer size of 2
+ch := make(chan int, 2)
+// Send two messages
+ch <- 1
+ch <- 2
+// Read them out
+fmt.Println(<-ch)
+fmt.Println(<-ch)
+\end{lstlisting}
+
+An unbuffered channel (\texttt{make (chan int)}) blocks till there's a reader or data to be read.
+
