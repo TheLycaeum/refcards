@@ -1,0 +1,23 @@
+\begin{itemize}
+\item Shell variables are variables maintained by the shell
+\item \texttt{FOO=1} sets the value of variable \texttt{FOO} to \texttt{1}
+\item No spaces around the \texttt{=} and if the value has a space, it
+  should be quoted. (e.g. \texttt{FOO=''Brian Kernighan''}).
+\item Can be accessed later using the \texttt{\$} sigil. e.g. \texttt{\$\{FOO\}}
+\item Variables are expanded inside double quotes (\texttt{``}). Not
+  inside \texttt{'}
+\item Subshells will not have copies of the variable unless exported
+  (e.g. \texttt{export FOO})
+\item Some special variables
+  \begin{center}
+    \begin{tabular}{ r  l }
+      PS1 & Shell prompt \\
+      PATH & Paths to search for commands \\
+      SHLVL & Current shell level \\
+      MANPATH & Paths to search for manual pages \\
+      \texttt{?} & Exit status of last command \\
+      \texttt{\_} & Last argument to previous command \\
+      \texttt{!} & Process id of last background command \\
+    \end {tabular}
+  \end{center}
+\end{itemize}

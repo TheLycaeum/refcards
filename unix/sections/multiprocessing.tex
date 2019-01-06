@@ -1,0 +1,37 @@
+\begin{itemize}
+\item Each process has a unique process identifier (\texttt{pid})
+\item Shells also have job control
+\end{itemize}
+\subsubsection{Foreground and Background}
+\begin{itemize}
+\item \emph{foreground} processes will hold the terminal
+\item Only one can run in a terminal at a time. e.g \texttt{/usr/bin/xeyes}
+\item Suffixing \texttt{\&} makes it run in the \emph{background}. e.g  \texttt{/usr/bin/xeyes \&}
+\end{itemize}
+\subsubsection{Checking processes}
+\begin{itemize}
+\item \texttt{ps} lists processes
+\item \texttt{ps -u root} lists root processes
+\item \texttt{ps -opid,cmd} shows only pid and commands
+\end{itemize}
+\subsubsection{Signals}
+\begin{itemize}
+\item Signals allow ways to send messages to running processes
+\item \texttt{man 7 signal} gives you list of signals
+\item \texttt{kill} sends signals to a process
+\item \texttt{kill \textit{pid}} sends \texttt{SIGINT} to \textit{pid}
+\item \texttt{SIGINT} is created when you hit \keys{\ctrl} \keys{c}
+\item Signals can be caught (run a custom handler), ignored (don't
+  respond to it)
+\end{itemize}
+\subsubsection{Jobs}
+\begin{itemize}
+  \item \emph{Jobs} as pipelines started from a shell.
+  \item The \texttt{jobs} command gives a list of jobs in the shell.
+  \item Job identifiers are prefixed with a \%.
+  \item \texttt{kill -9 \%1} will kill job 1.
+  \item \keys{\ctrl} \keys{z} will stop a foreground job (sends \texttt{SIGSTOP}).
+  \item Can be backgrounded using \texttt{bg}
+  \item Can be foregrounded using \texttt{fg}
+  \item Can be disowned using \texttt{fg} (no longer a shell job)
+\end{itemize}
